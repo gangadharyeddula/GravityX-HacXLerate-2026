@@ -61,6 +61,14 @@ uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 
 On Windows, activate the environment with `.venv\Scripts\Activate.ps1`.
 
+## Deploy on Render
+
+The repository includes a Render Blueprint and Dockerfile. From Render, choose **New → Blueprint**, connect `gangadharyeddula/GravityX-HacXLerate-2026`, and deploy the Blueprint. It builds the React frontend and serves it with the FastAPI backend from one web service; `/health` is the service health check.
+
+The prototype starts with its seeded demo data and JSON fallback. For data that must survive service restarts or deployments, set `MONGODB_URI` to a reachable MongoDB database in the Render service environment.
+
+Live AI requires a publicly reachable OmniRoute gateway and its endpoint key. Set `OMNIROUTE_BASE_URL` and `OMNIROUTE_API_KEY` in the Render service environment. The local default `http://localhost:20128/v1` points inside the Render container and cannot reach a gateway running on your computer. Without these settings, the assistant uses its local fallback.
+
 To enable live AI, connect an upstream provider in OmniRoute, confirm its active combo/model routing, and create an API key under Dashboard → Endpoints. Put that key in `OMNIROUTE_API_KEY` in the project-root `.env` file. The default base URL is `http://localhost:20128/v1`; `OMNIROUTE_MODEL=auto` uses OmniRoute's configured routing. You can set a specific available model ID instead. Restart the CreatorTwin backend after changing these values. The key stays on the backend and is never sent to the browser. `GET /api/ai/status` reports the selected provider/model and whether live AI is configured; chat responses identify OmniRoute or the local fallback.
 
 ## Demo accounts

@@ -1,5 +1,10 @@
+from pathlib import Path
+
 from fastapi import FastAPI
+from fastapi import HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
 from .config import FRONTEND_URL
 from .routers.ai import router as ai_router
@@ -38,5 +43,32 @@ app.include_router(reviews_router, prefix="/api")
 app.include_router(ai_router, prefix="/api")
 app.include_router(dashboard_router, prefix="/api")
 app.include_router(verification_router, prefix="/api")
+
+
+FRONTEND_DIST = Path(__file__).resolve().parents[2] / "frontend" / "dist"
+FRONTEND_ASSETS = FRONTEND_DIST / "assets"
+if FRONTEND_ASSETS.is_dir():
+    app.mount("/assets", StaticFiles(directory=FRONTEND_ASSETS), name="frontend-assets")
+
+
+@app.get("/{path:path}", include_in_schema=False)
+def serve_frontend(path: str):
+    if path == "api" or path.startswith("api/"):
+        raise HTTPException(status_code=404, detail="Not found")
+
+    index_file = FRONTEND_DIST / "index.html"
+    if not index_file.is_file():
+        raise HTTPException(status_code=404, detail="Frontend build not found")
+
+    frontend_root = FRONTEND_DIST.resolve()
+    requested_file = (FRONTEND_DIST / path).resolve()
+    try:
+        requested_file.relative_to(frontend_root)
+    except ValueError as error:
+        raise HTTPException(status_code=404, detail="Not found") from error
+
+    if requested_file.is_file():
+        return FileResponse(requested_file)
+    return FileResponse(index_file)
 
 ensure_seed_data()
