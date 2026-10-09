@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Orbit Bloom, fictional motion-study concept</title>
+  <desc id="desc">An iridescent glass sphere floats within glowing orbital ribbons in a deep violet space.</desc>
+  <defs>
+    <linearGradient id="space" x2="0" y2="1"><stop stop-color="#12142e"/><stop offset=".55" stop-color="#312354"/><stop offset="1" stop-color="#100f27"/></linearGradient>
+    <radialGradient id="mist"><stop stop-color="#b76cde" stop-opacity=".68"/><stop offset=".55" stop-color="#693cba" stop-opacity=".28"/><stop offset="1" stop-color="#39216d" stop-opacity="0"/></radialGradient>
+    <radialGradient id="orb" cx=".34" cy=".27"><stop stop-color="#fff5d9"/><stop offset=".15" stop-color="#f2c4e8"/><stop offset=".44" stop-color="#a68bea"/><stop offset=".72" stop-color="#5b80c7"/><stop offset="1" stop-color="#203a65"/></radialGradient>
+    <linearGradient id="ribbon" x1="0" x2="1"><stop stop-color="#ffb87e" stop-opacity="0"/><stop offset=".24" stop-color="#ffb87e"/><stop offset=".52" stop-color="#e8a8ff"/><stop offset=".77" stop-color="#73e6ff"/><stop offset="1" stop-color="#73e6ff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="ring" x1="0" x2="1"><stop stop-color="#8de8ff" stop-opacity="0"/><stop offset=".28" stop-color="#8de8ff"/><stop offset=".72" stop-color="#f2a7ff"/><stop offset="1" stop-color="#ffbd83" stop-opacity="0"/></linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="38"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="7"/></filter>
+    <filter id="shadow"><feGaussianBlur stdDeviation="20"/></filter>
+  </defs>
+  <rect width="800" height="1200" fill="url(#space)"/>
+  <ellipse cx="400" cy="590" rx="354" ry="430" fill="url(#mist)" filter="url(#blur)"/>
+  <g fill="#fff1ff" opacity=".65"><circle cx="113" cy="212" r="2"/><circle cx="213" cy="155" r="1.7"/><circle cx="666" cy="245" r="2"/><circle cx="706" cy="477" r="1.5"/><circle cx="83" cy="616" r="2"/><circle cx="683" cy="810" r="2"/><circle cx="194" cy="966" r="1.5"/><circle cx="573" cy="1041" r="2"/><circle cx="510" cy="132" r="1.3"/><circle cx="335" cy="266" r="1.5"/></g>
+  <ellipse cx="408" cy="626" rx="320" ry="128" fill="none" stroke="url(#ring)" stroke-width="5" transform="rotate(-24 408 626)" opacity=".72"/>
+  <ellipse cx="405" cy="620" rx="267" ry="211" fill="none" stroke="#cba5ff" stroke-opacity=".28" stroke-width="3" transform="rotate(39 405 620)"/>
+  <ellipse cx="405" cy="622" rx="352" ry="73" fill="none" stroke="#8feaff" stroke-opacity=".3" stroke-width="2" transform="rotate(18 405 622)"/>
+  <path d="M-40 731C112 621 214 472 364 481c159 9 221 180 397 112M-30 782c168-117 275-114 390-38 122 81 220 70 477-35" fill="none" stroke="url(#ribbon)" stroke-width="31" stroke-linecap="round" opacity=".65" filter="url(#soft)"/>
+  <path d="M-40 731C112 621 214 472 364 481c159 9 221 180 397 112M-30 782c168-117 275-114 390-38 122 81 220 70 477-35" fill="none" stroke="url(#ribbon)" stroke-width="8" stroke-linecap="round" opacity=".95"/>
+  <path d="M62 463c115 26 131 162 252 198 118 35 216-44 384-104" fill="none" stroke="#ffe0b9" stroke-opacity=".55" stroke-width="3"/>
+  <ellipse cx="408" cy="832" rx="170" ry="48" fill="#090a18" opacity=".65" filter="url(#shadow)"/>
+  <circle cx="405" cy="602" r="152" fill="#d78cff" opacity=".22" filter="url(#blur)"/>
+  <circle cx="405" cy="602" r="126" fill="url(#orb)" stroke="#fff5eb" stroke-opacity=".63" stroke-width="3"/>
+  <path d="M331 523q48-51 100-33" fill="none" stroke="#fff9e9" stroke-width="11" stroke-linecap="round" opacity=".78"/>
+  <path d="M331 548q30-28 62-23" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".72"/>
+  <path d="M319 655q63 73 147 43" fill="none" stroke="#9bf3ff" stroke-opacity=".65" stroke-width="4"/>
+  <circle cx="358" cy="576" r="9" fill="#fff5de" opacity=".62"/>
+  <circle cx="493" cy="665" r="5" fill="#fff" opacity=".55"/>
+  <path d="M110 1078h580" stroke="#d8b4ff" stroke-opacity=".24"/>
+</svg>

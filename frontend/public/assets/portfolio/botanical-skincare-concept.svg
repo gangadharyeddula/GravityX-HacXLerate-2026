@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Botanical serum, fictional product concept</title>
+  <desc id="desc">An unbranded amber serum bottle surrounded by dramatic botanical leaves.</desc>
+  <defs>
+    <linearGradient id="forest" x2="0" y2="1"><stop stop-color="#0b201d"/><stop offset=".52" stop-color="#19382d"/><stop offset="1" stop-color="#071714"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#e7a958" stop-opacity=".78"/><stop offset=".56" stop-color="#bd7542" stop-opacity=".22"/><stop offset="1" stop-color="#cb7840" stop-opacity="0"/></radialGradient>
+    <linearGradient id="glass" x1="0" x2="1"><stop stop-color="#613820"/><stop offset=".2" stop-color="#ce8850"/><stop offset=".36" stop-color="#9c552f"/><stop offset=".68" stop-color="#d39152"/><stop offset=".88" stop-color="#6a3d25"/><stop offset="1" stop-color="#291f18"/></linearGradient>
+    <linearGradient id="serum" x2="0" y2="1"><stop stop-color="#efb75c" stop-opacity=".1"/><stop offset="1" stop-color="#ffd17b" stop-opacity=".62"/></linearGradient>
+    <linearGradient id="leaf" x1="0" x2="1"><stop stop-color="#b5bc72"/><stop offset=".48" stop-color="#537d4e"/><stop offset="1" stop-color="#284a38"/></linearGradient>
+    <linearGradient id="dropper" x2="0" y2="1"><stop stop-color="#202222"/><stop offset=".3" stop-color="#d2b58a"/><stop offset="1" stop-color="#4a392b"/></linearGradient>
+    <filter id="shadow"><feGaussianBlur stdDeviation="24"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="30"/></filter>
+  </defs>
+  <rect width="800" height="1200" fill="url(#forest)"/>
+  <ellipse cx="405" cy="535" rx="330" ry="390" fill="url(#halo)" filter="url(#glow)"/>
+  <g fill="url(#leaf)" stroke="#c4c586" stroke-opacity=".28" stroke-width="2">
+    <path d="M18 785Q64 526 265 412q-37 219-247 373z"/><path d="M73 1014Q141 764 374 679q-69 224-301 335z"/>
+    <path d="M780 800Q730 529 526 406q31 228 254 394z"/><path d="M744 1030Q672 784 430 696q75 225 314 334z"/>
+    <path d="M132 609Q58 408 119 247q142 134 109 312z"/><path d="M677 610Q751 412 686 240q-142 135-108 314z"/>
+  </g>
+  <g fill="none" stroke="#dce0a1" stroke-opacity=".54" stroke-width="3" stroke-linecap="round">
+    <path d="M37 770q113-165 194-286M91 994q116-180 242-276M764 783Q648 581 542 438M718 1007Q599 820 461 708M180 556q-53-172-47-281M615 560q57-172 66-284"/>
+    <path d="M125 655 85 591m103-65-66-44m25 151 74-47m-51 265-94-8m184-113-24-88m340 20 76-60m-105 111 89 10m-44 187 85-47m-231-33 29-88M138 454l-69-9m116-75-9-61m426 117 67-17m-129-64 16-66"/>
+  </g>
+  <g fill="#d49c5d" opacity=".8"><circle cx="218" cy="352" r="5"/><circle cx="574" cy="340" r="4"/><circle cx="275" cy="890" r="3"/><circle cx="539" cy="842" r="4"/><circle cx="663" cy="716" r="3"/></g>
+  <ellipse cx="400" cy="1025" rx="204" ry="48" fill="#020807" opacity=".6" filter="url(#shadow)"/>
+  <ellipse cx="400" cy="1020" rx="157" ry="24" fill="#f0ae5b" opacity=".2"/>
+  <g>
+    <path d="M359 363h82v102h-82z" fill="url(#dropper)" stroke="#f2d7a9" stroke-opacity=".5" stroke-width="3"/>
+    <path d="M372 273q4-39 28-42h0q24 3 28 42l-5 94h-46z" fill="#252725" stroke="#cfb590" stroke-width="4"/>
+    <path d="M378 281h44" stroke="#8b765a" stroke-width="6"/>
+    <path d="M312 463q0-24 27-31l16-6h90l16 6q27 8 27 31v458q0 57-45 73-45 16-87 0-45-16-45-73z" fill="url(#glass)" stroke="#f4ca83" stroke-opacity=".52" stroke-width="4"/>
+    <path d="M319 641q80 22 162 0v279q0 57-45 73-45 16-87 0-45-16-45-73z" fill="url(#serum)"/>
+    <ellipse cx="400" cy="464" rx="88" ry="25" fill="#bb7947"/>
+    <ellipse cx="400" cy="464" rx="57" ry="11" fill="#32251e"/>
+    <path d="M333 510q20-22 28-2v358q-15 7-28-7z" fill="#ffdda0" opacity=".28"/>
+    <path d="M455 527v292" stroke="#ffe0a0" stroke-opacity=".26" stroke-width="9" stroke-linecap="round"/>
+    <path d="M343 718q57 17 114 0" stroke="#ffdd9d" stroke-opacity=".28" stroke-width="3"/>
+    <g fill="#f5d796" opacity=".64"><circle cx="365" cy="557" r="4"/><circle cx="436" cy="601" r="3"/><circle cx="382" cy="837" r="3.5"/><circle cx="448" cy="880" r="2.5"/></g>
+  </g>
+  <path d="M110 1110h580" stroke="#edbd79" stroke-opacity=".22"/>
+</svg>
